@@ -1,0 +1,29 @@
+.TsiKirKosContenedor {
+  counter-reset: titulo;
+}
+
+h1 {
+  counter-reset: subtitulo;
+}
+
+h2 {
+  counter-reset: subNivel3;
+}
+
+h1::before {
+  counter-increment: titulo;
+  content: "Consola " counter(titulo) ". ";
+}
+
+h2::before {
+  counter-increment: subtitulo;
+  content: counter(titulo) "." counter(subtitulo) " ";
+}
+
+h3::before {
+  color: blue;
+  counter-increment: subNivel3;
+  content: counter(titulo) "." counter(subtitulo) "." counter(subNivel3);
+}
+
+/*# sourceMappingURL=TsiKirKoshojaestilos_ej1TsiKirKos.css.map */
